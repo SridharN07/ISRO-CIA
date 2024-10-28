@@ -1,0 +1,75 @@
+.info-container {
+  color: white;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.info-container {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  }
+  
+#info-box-mercury, #info-box-venus, #info-box-moon, #info-box-mars, #info-box-jupiter, #info-box-saturn, #info-box-uranus, #info-box-neptune, #info-box-pluto {
+  display: none;
+}
+
+.info-content {
+  position: relative;
+}
+
+ion-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+}
+
+.info-container .box {
+  width: 11.875em;
+  height: 17.875em;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
+}
+.info-container .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-container .box .title {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.info-container .box div strong {
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.info-container .box div p {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.info-container .gravity {
+  margin-bottom: 10px;
+}
+
+.info-container .box div span {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.info-container .box:hover {
+  box-shadow: 0px 0px 20px 1px #ffbb763f;
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}

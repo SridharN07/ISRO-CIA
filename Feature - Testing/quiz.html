@@ -1,0 +1,143 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Get the user's name
+    $username = htmlspecialchars($_POST['username']);
+
+    // Define the correct answers
+    $correct_answers = [
+        'q1' => 'Mars',
+        'q2' => 'Jupiter',
+        'q3' => 'Milky Way',
+        'q4' => 'Sun',
+        'q5' => 'Saturn',
+        'q6' => 'Sputnik 1',
+        'q7' => 'Saturn',
+        'q8' => 'Venus',
+        'q9' => 'Venus',
+        'q10' => 'Hubble',
+        'q11' => 'Yuri Gagarin',
+        'q12' => 'Jupiter',
+        'q13' => 'Apollo 12',
+        'q14' => 'Venus',
+        'q15' => 'Sojourner'
+    ];
+
+    $score = 0;
+    $total_questions = count($correct_answers);
+
+    // Loop through the user's answers and compare them with the correct answers
+    foreach ($correct_answers as $question => $correct_answer) {
+        if (isset($_POST[$question]) && $_POST[$question] == $correct_answer) {
+            $score++;
+        }
+    }
+
+    // Calculate the percentage score
+    $percentage = ($score / $total_questions) * 100;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Certificate</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .certificate-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            width: 60%;
+            max-width: 800px;
+            border: 5px solid #007BFF;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .score {
+            font-size: 22px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+
+        .username {
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .feedback {
+            font-size: 20px;
+            color: #007BFF;
+            margin-top: 20px;
+        }
+
+        .retry-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .retry-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-container">
+        <h1>Certificate of Completion</h1>
+        <h2>Congratulations, <span class="username"><?php echo $username; ?></span>!</h2>
+        <p>You completed the Space Quiz.</p>
+        <p class="score">Your Score: <?php echo $score; ?> / <?php echo $total_questions; ?> (<?php echo number_format($percentage, 2); ?>%)</p>
+
+        <?php
+        // Provide feedback based on score
+        if ($percentage >= 80) {
+            echo '<p class="feedback">Excellent! You really know your space facts!</p>';
+        } elseif ($percentage >= 50) {
+            echo '<p class="feedback">Good job! You have a decent knowledge of space.</p>';
+        } else {
+            echo '<p class="feedback">Keep learning! There\'s always more to discover about the universe.</p>';
+        }
+        ?>
+
+        <!-- Retry Button -->
+        <a href="quiz.html" class="retry-button">Try Again</a>
+    </div>
+</body>
+</html>

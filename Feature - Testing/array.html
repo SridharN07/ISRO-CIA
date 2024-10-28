@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+</body>
+</html>
+
+<script>
+    const imageName = 'Mercury';
+    document.getElementById('body').innerHTML = `<div class="container">
+     <img src="./Styles/Images/Planets/imageName.webp">
+                <h6>imageName</h6>
+                <p> Result: <span id="imageNameResult"></span></p>
+                <button onmouseover="showimageName()" type="button">Learn More</button>
+            </div>
+            <div id="info-box-imageName" class="info-container">
+                <div class="box">
+                  <span class="title">imageName</span>
+                  <div class="info-content">
+                    <a onclick="hideimageName()">
+                  <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                  <img width="100%" src="./Styles/Images/Planets - PNG/imageName.png">
+                    <strong>Gravitational Constant</strong>
+                    <p>G = <span id="gravity"></span></p>
+                    <span>Your Weight: </span> <span id="imageNameResult"></span>
+                  </div>
+                </div>
+              </div>`;
+</script>

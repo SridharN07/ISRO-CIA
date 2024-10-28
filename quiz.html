@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRO - Age</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./Styles/navigation.css">
+    <link rel="stylesheet" href="./Styles/quiz.css">
+    <script src="./Scripts/quiz.js"></script>
+    <link rel="icon" href="./Styles/Images/Favicon/favicon.ico">
+</head>
+<body>
+    <header class="home">
+        <h2><a href="#home"><img class="logo" src="./Styles/Images/Logos/ISRO.png"></a></h2>
+        <div class="navigation">
+            <a style="padding: 20px;" href="./index.html">Home Page</a>
+        </div>
+        
+    </header>
+    <section class="main">
+        <h5>Space Quiz</h5>
+        <p>Taking a quiz is a great way to challenge your knowledge and learn new things. Whether you're competing solo or in a team, quizzes can be both entertaining and educational. They cover a wide range of topics, from history and science to pop culture and trivia, giving you a chance to test your brainpower. Think of it as a fun and interactive way to discover what you know—and what you can learn next! 🧠✨</p>
+        <input placeholder="Enter Your Name" id="name" type="text"> 
+        <input onclick="startQuiz()" value="Take Quiz" type="submit">
+        <span style="position: absolute; margin-top: 10px; display:none; color: white; border: red solid 2px; padding: 10px;" id="errorMessage"></span>
+        <div class="confirmation-box" id="confirmationBox">
+            <img id="logo" class="logo" src="./Styles/Images/Logos/ISRO.png">
+            <h1>Hey <span id="showname"></span>,</h1>
+            <p><strong>You have 3 minutes to complete 20 questions </strong></p>
+            <p><strong>1. Stay Calm: </strong>Take a deep breath. A clear mind is your best tool.</p>
+            <p><strong>2. Read Carefully: </strong>Make sure you understand the question before you answer.</p>
+            <p><strong>3. Manage Your Time: </strong>Don’t spend too long on any one question.</p>
+            <p><strong>4. Trust Your Instincts: </strong>Often, your first guess is right.</p>
+            <p><strong>5. Have Fun: </strong>Remember, it’s just a game—enjoy the challenge!</p>
+            <p><strong>Best of luck! 🧠✨</strong></p>
+            <div class="buttons">
+                <button type="button" onclick="confirmation()">Start!</button>
+            </div>
+        </div>
+    </section>
+    <section class="quiz-box" id="quiz-box">
+        <div class="quiz-container">
+            <div id="timer" class="timer">Time Left: <span id="countdown"></span></div>
+            <form id="quiz-form" action="calculate_score.php" method="POST">
+            <div class="grid-container">
+                <input name="username" style="display: none" id="fillUser"> 
+                <div class="question">
+                    <p>1. Which Planet is known as the Red Planet?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q1a" name="q1" value="Mars">
+                        <label for="q1a">Mars</label>
+            
+                        <input type="radio" id="q1b" name="q1" value="Saturn">
+                        <label for="q1b">Saturn</label>
+            
+                        <input type="radio" id="q1c" name="q1" value="Jupiter">
+                        <label for="q1c">Jupiter</label>
+            
+                        <input type="radio" id="q1d" name="q1" value="Mercury">
+                        <label for="q1d">Mercury</label>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p>2. What is the largest planet in our solar system?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q2a" name="q2" value="Jupiter">
+                        <label for="q2a">Jupiter</label>
+            
+                        <input type="radio" id="q2b" name="q2" value="Saturn">
+                        <label for="q2b">Saturn</label>
+            
+                        <input type="radio" id="q2c" name="q2" value="Neptune">
+                        <label for="q2c">Neptune</label>
+            
+                        <input type="radio" id="q2d" name="q2" value="Earth">
+                        <label for="q2d">Earth</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>3.  What galaxy is Earth located in?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q3a" name="q3" value="Milky Way">
+                        <label for="q3a">Milky Way</label>
+                
+                        <input type="radio" id="q3b" name="q3" value="Andromeda">
+                        <label for="q3b">Andromeda</label>
+                
+                        <input type="radio" id="q3c" name="q3" value="Triangulum">
+                        <label for="q3c">Triangulum</label>
+                
+                        <input type="radio" id="q3d" name="q3" value="Whirlpool">
+                        <label for="q3d">Whirlpool</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>4. What is the closest star to Earth?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q4a" name="q4" value="Sun">
+                        <label for="q4a">Sun</label>
+                
+                        <input type="radio" id="q4b" name="q4" value="Alpha Centauri">
+                        <label for="q4b">Alpha Centauri</label>
+                
+                        <input type="radio" id="q4c" name="q4" value="Sirius">
+                        <label for="q4c">Sirius</label>
+                
+                        <input type="radio" id="q4d" name="q4" value="Proxima Centauri">
+                        <label for="q4d">Proxima Centauri</label>
+                    </div>
+                </div>
+                
+                
+                <div class="question">
+                    <p>5.   Which planet has the most moons?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q5a" name="q5" value="Mars">
+                        <label for="q5a">Mars</label>
+                
+                        <input type="radio" id="q5b" name="q5" value="Jupiter">
+                        <label for="q5b">Jupiter</label>
+                
+                        <input type="radio" id="q5c" name="q5" value="Saturn">
+                        <label for="q5c">Saturn</label>
+                
+                        <input type="radio" id="q5d" name="q5" value="Uranus">
+                        <label for="q5d">Uranus</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>6.   What is the name of the first artificial satellite launched into space?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q6a" name="q6" value="Sputnik 1">
+                        <label for="q6a">Sputnik 1</label>
+                
+                        <input type="radio" id="q6b" name="q6" value="Explorer 1">
+                        <label for="q6b">Explorer 1</label>
+                
+                        <input type="radio" id="q6c" name="q6" value="Voyager 1">
+                        <label for="q6c">Voyager 1</label>
+                
+                        <input type="radio" id="q6d" name="q6" value="Hubble">
+                        <label for="q6d">Hubble</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>7.   Which planet is known for its rings?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q7a" name="q7" value="Jupiter">
+                        <label for="q7a">Jupiter</label>
+                
+                        <input type="radio" id="q7b" name="q7" value="Saturn">
+                        <label for="q7b">Saturn</label>
+                
+                        <input type="radio" id="q7c" name="q7" value="Uranus">
+                        <label for="q7c">Uranus</label>
+                
+                        <input type="radio" id="q7d" name="q7" value="Neptune">
+                        <label for="q7d">Neptune</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>8.   What is the hottest planet in our solar system?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q8a" name="q8" value="Mercury">
+                        <label for="q8a">Mercury</label>
+                
+                        <input type="radio" id="q8b" name="q8" value="Venus">
+                        <label for="q8b">Venus</label>
+                
+                        <input type="radio" id="q8c" name="q8" value="Earth">
+                        <label for="q8c">Earth</label>
+                
+                        <input type="radio" id="q8d" name="q8" value="Mars">
+                        <label for="q8d">Mars</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>9.   Which planet is known as the Earth's twin?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q9a" name="q9" value="Mars">
+                        <label for="q9a">Mars</label>
+                
+                        <input type="radio" id="q9b" name="q9" value="Venus">
+                        <label for="q9b">Venus</label>
+                
+                        <input type="radio" id="q9c" name="q9" value="Neptune">
+                        <label for="q9c">Neptune</label>
+                
+                        <input type="radio" id="q9d" name="q9" value="Uranus">
+                        <label for="q9d">Uranus</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>10.   What is the name of NASA's most famous space telescope?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q10a" name="q10" value="Hubble">
+                        <label for="q10a">Hubble</label>
+                
+                        <input type="radio" id="q10b" name="q10" value="Kepler">
+                        <label for="q10b">Kepler</label>
+                
+                        <input type="radio" id="q10c" name="q10" value="James Webb">
+                        <label for="q10c">James Webb</label>
+                
+                        <input type="radio" id="q10d" name="q10" value="Spitzer">
+                        <label for="q10d">Spitzer</label>
+                    </div>
+                </div>
+            
+                <div class="question">
+                    <p>11.   What is the name of the first human to journey into outer space?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q11a" name="q11" value="Neil Armstrong">
+                        <label for="q11a">Neil Armstrong</label>
+                
+                        <input type="radio" id="q11b" name="q11" value="Yuri Gagarin">
+                        <label for="q11b">Yuri Gagarin</label>
+                
+                        <input type="radio" id="q11c" name="q11" value="Buzz Aldrin">
+                        <label for="q11c">Buzz Aldrin</label>
+                
+                        <input type="radio" id="q11d" name="q11" value="Alan Shepard">
+                        <label for="q11d">Alan Shepard</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>12.   Which planet is known for having a Great Red Spot?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q12a" name="q12" value="Mars">
+                        <label for="q12a">Mars</label>
+                
+                        <input type="radio" id="q12b" name="q12" value="Jupiter">
+                        <label for="q12b">Jupiter</label>
+                
+                        <input type="radio" id="q12c" name="q12" value="Saturn">
+                        <label for="q12c">Saturn</label>
+                
+                        <input type="radio" id="q12d" name="q12" value="Neptune">
+                        <label for="q12d">Neptune</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>13.   What is the name of the second manned mission to land on the Moon?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q13a" name="q13" value="Apollo 11">
+                        <label for="q13a">Apollo 11</label>
+                
+                        <input type="radio" id="q13b" name="q13" value="Apollo 12">
+                        <label for="q13b">Apollo 12</label>
+                
+                        <input type="radio" id="q13c" name="q13" value="Apollo 13">
+                        <label for="q13c">Apollo 13</label>
+                
+                        <input type="radio" id="q13d" name="q13" value="Apollo 14">
+                        <label for="q13d">Apollo 14</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>14.   Which planet is known as the Morning Star or the Evening Star?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q14a" name="q14" value="Mars">
+                        <label for="q14a">Mars</label>
+                
+                        <input type="radio" id="q14b" name="q14" value="Venus">
+                        <label for="q14b">Venus</label>
+                
+                        <input type="radio" id="q14c" name="q14" value="Mercury">
+                        <label for="q14c">Mercury</label>
+                
+                        <input type="radio" id="q14d" name="q14" value="Jupiter">
+                        <label for="q14d">Jupiter</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>15.   What is the name of the first rover to land on Mars?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q15a" name="q15" value="Sojourner">
+                        <label for="q15a">Sojourner</label>
+                
+                        <input type="radio" id="q15b" name="q15" value="Spirit">
+                        <label for="q15b">Spirit</label>
+                
+                        <input type="radio" id="q15c" name="q15" value="Opportunity">
+                        <label for="q15c">Opportunity</label>
+                
+                        <input type="radio" id="q15d" name="q15" value="Curiosity">
+                        <label for="q15d">Curiosity</label>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <p>16. What is the main objective of the Perseverance rover?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q16a" name="q16" value="To search for past life">
+                        <label for="q16a">To search for past life</label>
+                        <input type="radio" id="q16b" name="q16" value="To map the planet">
+                        <label for="q16b">To map the planet</label>
+                        <input type="radio" id="q16c" name="q16" value="To study the atmosphere">
+                        <label for="q16c">To study the atmosphere</label>
+                        <input type="radio" id="q16d" name="q16" value="To search for water">
+                        <label for="q16d">To search for water</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>17. Which rover holds the record for the longest distance traveled on Mars?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q17a" name="q17" value="Spirit">
+                        <label for="q17a">Spirit</label>
+                        <input type="radio" id="q17b" name="q17" value="Opportunity">
+                        <label for="q17b">Opportunity</label>
+                        <input type="radio" id="q17c" name="q17" value="Curiosity">
+                        <label for="q17c">Curiosity</label>
+                        <input type="radio" id="q17d" name="q17" value="Perseverance">
+                        <label for="q17d">Perseverance</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>18. What is the power source for the Curiosity rover?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q18a" name="q18" value="Solar Panels">
+                        <label for="q18a">Solar Panels</label>
+                        <input type="radio" id="q18b" name="q18" value="Nuclear Battery">
+                        <label for="q18b">Nuclear Battery</label>
+                        <input type="radio" id="q18c" name="q18" value="Fuel Cells">
+                        <label for="q18c">Fuel Cells</label>
+                        <input type="radio" id="q18d" name="q18" value="Wind Energy">
+                        <label for="q18d">Wind Energy</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>19. When did the Spirit rover land on Mars?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q19a" name="q19" value="2002">
+                        <label for="q19a">2002</label>
+                        <input type="radio" id="q19b" name="q19" value="2003">
+                        <label for="q19b">2003</label>
+                        <input type="radio" id="q19c" name="q19" value="2004">
+                        <label for="q19c">2004</label>
+                        <input type="radio" id="q19d" name="q19" value="2005">
+                        <label for="q19d">2005</label>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <p>20. Which rover discovered evidence of ancient water on Mars?</p>
+                    <div class="option-box">
+                        <input type="radio" id="q20a" name="q20" value="Opportunity">
+                        <label for="q20a">Opportunity</label>
+                        <input type="radio" id="q20b" name="q20" value="Curiosity">
+                        <label for="q20b">Curiosity</label>
+                        <input type="radio" id="q20c" name="q20" value="Spirit">
+                        <label for="q20c">Spirit</label>
+                        <input type="radio" id="q20d" name="q20" value="Perseverance">
+                        <label for="q20d">Perseverance</label>
+                    </div>
+                </div>
+                
+            </div>
+            
+                <input type="submit" value="Submit" class="submit-button">
+                <input type="reset" value="Reset" class="submit-button">
+            </form>
+            </div>
+    </section>
+</body>
+</html>

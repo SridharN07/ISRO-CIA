@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Submitted!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="./Styles/Images//Favicon/favicon.ico">
+    <link rel="stylesheet" href="/Styles/animation.css">
+</head>
+<body>
+    <main>
+        <div class="box">
+            <img class="logo" src="./Styles/Images/Logos/ISRO.png">
+            <h2>Application Submitted!</h2>
+                <p> Thank you for applying to our application! We appreciate your interest and the time you took to complete the process. Your application has been received and is currently under review.</p>
+                <p> You Will be Redirected to Home Page in <span id="num">6 </span> </p>
+        </div>
+    </main>
+    </body>
+</html>
+
+<!-- Styles -->
+
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+body{
+    cursor: url('./mouse.png'), auto;
+}
+span {
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+body{
+    background: url('./Styles/Images/Image/dark-purple.png')no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+.box {
+    position: fixed;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 100%;
+    text-align: center;
+}
+
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center
+}
+
+img{
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p {     
+    color: white;
+    width:40%;
+    margin-left: 30%;
+    font-size: 20px;
+}
+span {
+    color: blue;
+}
+
+@media screen and (max-width: 500px){
+    .box{
+        width: 400px;   
+        height: 692px;
+    }
+}
+    </style>
+
+<script>
+    let count = 5;
+    const intervalId = setInterval(() => {
+    document.getElementById('num').innerHTML = count;
+    if (count === 0) {
+        location.replace('./index.html')
+        clearInterval(intervalId);
+    }
+    count--;
+    }, 1000);
+
+</script>

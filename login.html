@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ISRO - Login</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/login-form.css">
+    <link rel="icon" href="./Styles/Images//Favicon/favicon.ico">
+
+    <style>
+        .info {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="./login.php" method="post" autocomplete="off" novalidate>
+        <img id="logo" class="logo" src="./Styles/Images/Logos/ISRO.png">
+        <h3>Login</h3>
+        <label for="username">Username</label>
+        <input type="text" placeholder="Enter your Email" name="username" id="username" required>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password" name="password" id="password" required>
+        <button>Log In</button>
+
+
+
+        <p class="info"> Don't Have an Account? <a href="./register.php">Register Here</a></p>
+        <!--<div class="social">
+          <div class="go"><img src="./Styles/Images/Logos/google.svg"></div>
+          <div class="fb"><img src="./Styles/Images/Logos/x.svg"></div>
+          <div class="fb"><img src="./Styles/Images/Logos/facebook.svg"></div>
+          <div class="fb"><img src="./Styles/Images/Logos/apple.svg"></div>
+          <div class="fb"><img src="./Styles/Images/Logos/microsoft.svg"></div>
+          <div class="fb"><img src="./Styles/Images/Logos/linkedin.svg"></div>
+        </div>-->
+    </form>
+</body>
+</html>

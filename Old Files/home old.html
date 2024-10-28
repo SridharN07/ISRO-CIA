@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRO</title>
+    <link rel="icon" href="./ISRO.png">
+    <style>
+        body {
+            padding: 30px;
+        }
+    </style>
+</head>
+<body bgcolor="black">
+    <div id="main">
+    <font color="#fff" face="Calibri">
+    <center><img width="64" class="logo" src="./Styles/Images/Logos/ISRO.png">
+    <h1 text="white">Interstellar Space and Research Organisation</h1>  <hr>
+    </center>
+    <font size="04"><h2>About ISRO</h2></font>
+    <font size="06"><p>ISRO is an independent agency of the Pandora federal government responsible for the civilian space program, as well as aeronautics and space research. ISRO was created for educating youngster and educator to create awareness about the space science. The organisation is involved in science, engineering and technology to harvest the benefits of outer space for our mankind.</p>
+    </font>
+    <hr>
+    <font size="4"><h2>Our Missions</h2></font>
+    <font size="5"><p><strong>Mission 1: The Lunar Exploration</strong> - Our Lunar Exploration mission aims to establish a sustainable presence on the Moon, conduct scientific research, and prepare for future human missions to Mars.</p>
+    <p><strong>Mission 2: The Mars Exploration</strong> The Mars Rover Program focuses on exploring the Martian surface, searching for signs of past life, and collecting samples for future return to Earth.</p>
+    <p><strong>Mission 3: The Deep Exploration</strong> - The Deep Space Observatory will launch a next-generation space telescope to observe distant galaxies, stars, and planetary systems, expanding our understanding of the universe.</p>
+    </font>
+    <hr>
+    <font size="5"><h2>Research Areas</h2></font>
+    <font size="5"><p><strong>Astrobiology</strong> - Studying the potential for life in the universe, including the search for extraterrestrial life and the conditions necessary for life to exist.</p>
+        <p><strong>Planetary Science</strong> - The formation, evolution, and characteristics of planets, moons, and other celestial bodies in our solar system and beyond.</p>
+        <p><strong>Astrophysics</strong> - Exploring the fundamental nature of the universe, including the study of dark matter, dark energy, black holes, and the origins of the cosmos.</p>
+    </font>
+        <hr>
+    <font size="4"><h2>Our Contacts Details</h2></font>
+    <font size="5"><p>
+        <p>Email: info@isro.gov</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Interstellar Space Research Ave, Galaxy City, Pandora</p></p></font>
+        <hr>
+        <a style="margin-left: 10px;  color: white; font-size: 26px;" href="./missions.html">About Missions</a>
+        <a style="margin-left: 30px;  color: white; font-size: 26px;" href="./upcoming-mission.html">About Upcoming Missions</a>
+        <a style="margin-left: 30px;  color: white; font-size: 26px;" href="./join-us.html">Join us</a>
+        <marquee direction="right"><font size="4"><p>&copy; 2024 - Interstellar Space and Research Organisation. All rights reserved.</p></font></marquee>
+    </div>
+        <div id="loader-wrapper" class="loader-wrapper">
+        <div class="loader">
+            <div class="load-text">
+            <img class="image" src="./Styles/Images/Logos/ISRO.png">
+            <span>Loading...</span></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    // Wait for 3 seconds (3000 milliseconds) before hiding the div
+setTimeout(() => {
+    const mainDiv = document.getElementById('main');
+    const myDiv = document.getElementById('loader-wrapper');
+    myDiv.style.display = 'none';
+    mainDiv.style.display = 'block';
+}, 3000);
+
+</script>
+
+<style>
+ #main {
+    display: none;
+ }
+    .loader-wrapper {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        background-color: black;
+    }
+
+   .image {
+  position: relative;
+  animation: bounce 5s ease-in-out infinite;
+  width: 20%;
+}
+img {
+    display: block;
+    margin-right: auto;
+    margin-top: auto;
+    width: 8%;
+    position: absolute;
+    left: 10px;
+}
+.load-text {
+    position: relative;
+}
+span {
+    position: absolute;
+    text-align: center;
+    bottom: -45px;
+    left: 2%;
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.loader {
+    position: absolute;
+    left: 44%;
+    top: 30%;
+    text-align: center;
+}
+.loader::before {
+  content: '';
+  position: absolute;
+}
+.loader::after {
+  content: '';
+  position: absolute;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-2px,-2px);
+  }
+
+  25% {
+    transform: translate(2px,-2px);
+  }
+
+  50% {
+    transform: translate(2px,0px);
+  }
+
+  75% {
+    transform: translate(-2px,0px);
+  }
+
+  100% {
+    transform: translate(-2px,-2px);
+  }
+}
+</style>
+</style>

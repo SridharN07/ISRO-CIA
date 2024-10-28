@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body{
+  cursor: url('./Images/mouse.png'), auto;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    display: block;
+    background-repeat:  no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 1.8%;
+    filter: invert(100%);
+}
+
+#nationality::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    display: block;
+    background-repeat:  no-repeat;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 1.8%;
+    filter: invert(100%);
+}
+
+/*
+input[type="date"] { 
+    background: transparent;
+    color: white;
+}
+/*
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+*/
+
+/* Main Body */
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('./Images/Image/dark-purple.png')no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+}
+
+/* Confirmation Body */
+section .confirmation-box {
+    display: none;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    width: 600px;
+    height: 350px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    background: transparent;
+}
+section .confirmation-box p {
+    margin:5px 10px;
+}
+
+section .confirmation-box h3 {
+    text-align: center;
+}
+section .confirmation-box button {
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+section .confirmation-box img{
+    width: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-box{
+    position: relative;
+    margin: 20px;
+    width: 1200px;
+    height: 650px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+    margin-left: 60px;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+    pointer-events: none;
+}
+button{
+    display: block;
+    width: 20%;
+    height: 40px;
+    border-radius: 20px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="radio"] {
+    display: flex;
+    width: 30px;
+    vertical-align: baseline;
+    margin-left: 10px;
+}
+
+img{
+    width: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 500px){
+
+    .form-box{
+        width: 600px;   
+        height: 1100px;
+    }
+
+    .inputbox1{
+        margin-left: auto;
+        margin-right: auto;
+        width: 320px;
+    }
+
+    .inputbox{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    button{
+        width: 100px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    section {
+        position: relative;
+    }
+}
+
+#userForm {
+    display: block;
+}

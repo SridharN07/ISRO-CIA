@@ -1,0 +1,125 @@
+* {
+    animation: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/*Main */
+body {
+background-color: black;
+font-family: Arial, sans-serif;
+}
+
+.main {
+background: url("./Images/Image/iceland.webp");
+background-position: center;
+background-size: cover;
+padding: 40px;
+box-shadow: 400px 0px 400px rgba(0,0,0,0.9)inset;
+}
+.main h5 {
+font-size: 80px;
+color: #ffffff;
+width: 45%;
+line-height: 100%;
+padding-top: 2%;
+margin-top: 4%;
+margin-bottom: 2%;
+}
+.main p {
+font-size: 1.1rem;
+line-height: 1.6rem;
+width: 52%;
+color: #ffffff;
+margin: 0;
+margin-bottom: 50px;
+}
+
+.content {
+background-color: #121212;
+color: white;
+padding: 20px 0 100px 0;
+}
+
+.main li {
+color: white;
+font-size: 20px;
+max-width: 800px;
+list-style-position: outside;
+}
+
+.main input[type=number] {
+padding: 15px;
+font-size: 20px;
+border: 1px solid black;
+background-color: #252525;
+color: white;
+}
+.main input[type=number]::placeholder  {
+color: #ffffff;
+}
+.main input[type=submit] {
+background-color: #f64137;
+padding: 15px;
+padding-top: 19px;
+font-weight: bold;
+font-size: 16px;
+color: #ffffff;
+border: none;
+}
+.grid-container{
+display: grid;
+grid-template-columns: 30% 30% 30%;
+gap: 5%;
+padding: 30px;
+}
+.container {
+background-color: #252525;
+padding-bottom: 20px;
+position: relative;
+/*box-shadow: 10px 10px 66px 0px rgba(0,255,144,0.69);
+-webkit-box-shadow: 10px 10px 66px 0px rgba(0,255,144,0.69);
+-moz-box-shadow: 10px 10px 66px 0px rgba(0,255,144,0.69); */
+}
+.container p {
+text-align: center;
+}
+.container img {
+padding: 0px;
+width: 100%;
+
+}
+h6 {
+font-size: 1.6rem;
+margin-bottom: 5px;
+text-align: center;
+margin-top: 0;
+}
+
+
+.logo {
+transition: 1s ease;
+}
+.logo:hover {
+transition: ease 1s;
+transform: translate(-5%,-5%);
+}
+
+.container button {
+margin-left: 37%;
+background-color: white;
+outline: none;
+margin-top: 10px;
+border: none;
+color: black;
+padding: 20px;
+font-weight: bold;
+cursor: pointer;
+}

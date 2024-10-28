@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISRO - Age</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <link rel="stylesheet" href="./Styles/navigation.css">
+    <link rel="stylesheet" href="./Styles/age-calculator.css">
+    <link rel="stylesheet" href="./Styles/infobox.css">
+    <script src="./Scripts/calculate.js"></script>
+    <link rel="icon" href="./Styles/Images/Favicon/favicon.ico">
+</head>
+<body>
+    <header class="home">
+        <h2><a href="#home"><img class="logo" src="./Styles/Images/Logos/ISRO.png"></a></h2>
+        <div class="navigation">
+            <a style="padding: 20px;" href="./index.html">Home Page</a>
+        </div>
+        
+    </header>
+    <section class="main">
+        <h5>Calculate Your Age in Different Planets</h5>
+        <p>Calculating your age on different planets is a fun way to understand how time varies across our solar system.</p>
+        <input placeholder="Enter Your Age" id="earthAge" type="number"> 
+        <input onclick="calculateAge()" onkeydown="calculateAge()" id="input" value="Calculate" type="submit">
+    </section>
+    <section class="content">
+        <div class="grid-container">
+            <div class="container">
+                <img src="./Styles/Images/Planets/Mercury.webp">
+                <h6>Mercury</h6>
+                <p> Result: <span class="span" id="mercuryResult"></span class></p>
+                <button onclick="showMercury()" type="button">Learn More</button>
+
+                <div id="info-box-mercury" class="info-container">
+                    <div class="box">
+                      <span class="title">MERCURY</span>
+                      <a onclick="hideMercury()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="100%" src="./Styles/Images/Planets - PNG/Mercury.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span id="age-mercury"></span></p>
+                        <span>Your Age: </span> <span id="mercury-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="container">
+                <img src="./Styles/Images/Planets/Venus.webp">
+                <h6>Venus</h6>
+                <p> Result: <span id="venusResult"></span></p>
+                <button onclick="showVenus()" type="button">Learn More</button>
+
+                <div id="info-box-venus" class="info-container">
+                    <div class="box">
+                      <span class="title">VENUS</span>
+                      <a onclick="hideVenus()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="90%" src="./Styles/Images/Planets - PNG/Venus.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span class="age" id="age-venus"></span></p>
+                        <span>Your Age: </span> <span id="venus-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="container">
+                <img src="./Styles/Images/Planets/Moon.webp">
+                <h6>Moon</h6>
+                <p> Result: <span class="span" id="moonResult"></span></p>
+                <button onclick="showMoon()" type="button">Learn More</button>
+
+                <div id="info-box-moon" class="info-container">
+                    <div class="box">
+                      <span class="title">MOON</span>
+                      <a onclick="hideMoon()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="90%" src="./Styles/Images/Planets - PNG/Moon.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span class="age" id="age-moon"></span></p>
+                        <span>Your Age: </span> <span id="moon-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            
+            <div class="container">
+                <img src="./Styles/Images/Planets/Mars.webp">
+                <h6>Mars</h6>
+                <p> Result: <span class="span" id="marsResult"></span></p>
+                <button onclick="showMars()" type="button">Learn More</button>
+
+                <div id="info-box-mars" class="info-container">
+                    <div class="box">
+                      <span class="title">MARS</span>
+                      <a onclick="hideMars()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="90%" src="./Styles/Images/Planets - PNG/Mars.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span class="age" id="age-mars"></span></p>
+                        <span>Your Age: </span> <span id="mars-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="container">
+                <img src="./Styles/Images/Planets/Jupiter.webp">
+                <h6>Jupiter</h6>
+                <p> Result: <span class="span" id="jupiterResult"></span></p>
+                <button onclick="showJupiter()" type="button">Learn More</button>
+
+                <div id="info-box-jupiter" class="info-container">
+                    <div class="box">
+                      <span class="title">JUPITER</span>
+                      <a onclick="hideJupiter()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="90%" src="./Styles/Images/Planets - PNG/Jupiter.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span class="age" id="age-jupiter"></span></p>
+                        <span>Your Age: </span> <span id="jupiter-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="container">
+                <img src="./Styles/Images/Planets/Saturn.webp">
+                <h6>Saturn</h6>
+                <p> Result: <span class="span" id="saturnResult"></span></p>
+                <button onclick="showSaturn()" type="button">Learn More</button>
+
+                <div id="info-box-saturn" class="info-container">
+                    <div class="box">
+                      <span class="title">SATURN</span>
+                      <a onclick="hideSaturn()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="90%" src="./Styles/Images/Planets - PNG/Saturn.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span class="age" id="age-saturn"></span></p>
+                        <span>Your Age: </span> <span id="saturn-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="container">
+                <img src="./Styles/Images/Planets/Uranus.webp">
+                <h6>Uranus</h6>
+                <p> Result: <span class="span" id="uranusResult"></span></p>
+                <button onclick="showUranus()" type="button">Learn More</button>
+
+                <div id="info-box-uranus" class="info-container">
+                    <div class="box">
+                      <span class="title">URANUS</span>
+                      <a onclick="hideUranus()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="90%" src="./Styles/Images/Planets - PNG/Uranus.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span class="age" id="age-uranus"></span></p>
+                        <span>Your Age: </span> <span id="uranus-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="container">
+                <img src="./Styles/Images/Planets/Neptune.webp">
+                <h6>Neptune</h6>
+                <p> Result: <span class="span" id="neptuneResult"></span></p>
+                <button onclick="showNeptune()" type="button">Learn More</button>
+
+                <div id="info-box-neptune" class="info-container">
+                    <div class="box">
+                      <span class="title">NEPTUNE</span>
+                      <a onclick="hideNeptune()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="90%" src="./Styles/Images/Planets - PNG/Neptune.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span class="age" id="age-neptune"></span></p>
+                        <span>Your Age: </span> <span id="neptune-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="container">
+                <img src="./Styles/Images/Planets/Pluto.webp">
+                <h6>Pluto</h6>
+                <p> Result: <span class="span" id="plutoResult"></span></p>
+                <button onclick="showPluto()" type="button">Learn More</button>
+
+                <div id="info-box-pluto" class="info-container">
+                    <div class="box">
+                      <span class="title">PLUTO</span>
+                      <a onclick="hidePluto()">
+                        <ion-icon id="close-btn" name="close-outline"></ion-icon></a>
+                      <div class="info-content">
+                      <img width="90%" src="./Styles/Images/Planets - PNG/Pluto.png">
+                        <strong>Orbital Constant</strong>
+                        <p>T = <span class="age" id="age-pluto"></span></p>
+                        <span>Your Age: </span> <span id="pluto-Result"></span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

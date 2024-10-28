@@ -1,0 +1,197 @@
+/* Whole HTML Body Styling */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #24262b;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+/*Header*/
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+header img{
+    position: relative;
+    width: 60px;
+    left: 1150%;
+}
+header .navigation a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 15px;  
+    border-radius: 5px;
+    transition: 0.9s ease;
+    margin-right: 20px;
+}
+header .navigation a:not(:last-child)
+{
+    margin-right: 30px;
+}
+
+header .navigation a:hover{
+    background: white;
+    color: #000;
+}
+
+/* All section Layout Style*/
+.main, .image-day,.earth-center{
+    padding: 80px;
+}
+
+/*main body*/
+.main {
+    color: #ffffff;
+    background: url('./Styles/Images/Image/satellite.webp'),no-repeat;
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.main p{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    width: 70%;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.main h2 {
+    font-size: 80px;
+    color: #ffffff;
+    width: 10%;
+    line-height: 90%;
+    padding-top: 5%;
+    margin-bottom: 4%;
+    margin-top: 0;
+}
+.more-info {
+    color: #ffffff;
+    display: inline-block;
+    margin-right: 15%;
+    margin-left: 0;
+
+}
+.more-info p{
+    padding-left: 40px;
+    display: inline;
+    align-items: center;
+    letter-spacing: 4px;
+    font-size: 20px;
+    text-align: center;
+    overflow: visible;
+    margin: 0;
+}
+.main .more-info li{
+    position: relative;
+    top: -15px;
+    list-style: none;
+    font-size: 20px;
+}
+.main hr{
+    display: block;
+    width: 100%;
+    border: 1px white solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+p {
+    line-height: 1.2;
+    font-size: 30px;
+}
+
+ul {
+    font-size: 25px;
+}
+
+/* Image of the day */
+.image-day {
+
+    background-color: #ffffff;
+}
+.image-day span {
+    color: #000;
+    font-weight: lighter;
+    font-size: 10px;
+    gap: 10px;
+    letter-spacing: 2px;
+}
+.image-day h1 {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 8%;
+}
+.image-day h6{
+    font-size: 22px;
+    margin: 10px 0;
+}
+.image-day p{
+    font-size: 1rem;
+    line-height: 30px;
+    width: 29%;
+}
+.image-day img {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    background-color: aliceblue;
+    padding-left: 20%;
+    padding-right: 10%;
+}
+.image {
+    position: relative;
+}
+
+/*Earth Information Center */
+.earth-center {
+    background: url("./Styles/Images/Image/mileb.jpg"), no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.earth-center h5 {
+    font-size: 80px;
+    color: #ffffff;
+    width: 10%;
+    line-height: 90%;
+    padding-top: 5%;
+    margin-bottom: 4%;
+}
+.earth-center p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    width: 42%;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.earth-center a{
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+}
+.earth-center .fa-solid{
+    color: #f64137;
+    margin-left: 5px;
+    font-size: 18px;
+    position: relative;
+    top: 1px;
+    transform: rotate(-45deg);
+}

@@ -1,0 +1,563 @@
+/* Whole HTML Body Styling */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #24262b;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+/*Header*/
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+header img{
+    position: relative;
+    width: 60px;
+    left: 1150%;
+}
+header .navigation a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 5px 15px;  
+    border-radius: 5px;
+    transition: 0.9s ease;
+    margin-right: 20px;
+}
+header .navigation a:not(:last-child)
+{
+    margin-right: 30px;
+}
+
+header .navigation a:hover{
+    background: white;
+    color: #000;
+}
+
+/* All section Layout Style*/
+.main, .image-day,.earth-center{
+    padding: 80px;
+}
+
+/*main body*/
+.main {
+    color: #ffffff;
+    background: url('./Images/Image/satellite.webp'),no-repeat;
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.main p{
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    width: 70%;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.main h2 {
+    font-size: 80px;
+    color: #ffffff;
+    width: 10%;
+    line-height: 90%;
+    padding-top: 5%;
+    margin-bottom: 4%;
+    margin-top: 0;
+}
+.more-info {
+    color: #ffffff;
+    display: inline-block;
+    margin-right: 15%;
+    margin-left: 0;
+
+}
+.more-info p{
+    padding-left: 40px;
+    display: inline;
+    align-items: center;
+    letter-spacing: 4px;
+    font-size: 20px;
+    text-align: center;
+    overflow: visible;
+    margin: 0;
+}
+.main .more-info li{
+    position: relative;
+    top: -15px;
+    list-style: none;
+    font-size: 20px;
+}
+.main hr{
+    display: block;
+    width: 100%;
+    border: 1px white solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+p {
+    line-height: 1.2;
+    font-size: 30px;
+}
+
+ul {
+    font-size: 25px;
+}
+
+/* Image of the day */
+.image-day {
+
+    background-color: #ffffff;
+}
+.image-day span {
+    color: #000;
+    font-weight: lighter;
+    font-size: 10px;
+    gap: 10px;
+    letter-spacing: 2px;
+}
+.image-day h1 {
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 8%;
+}
+.image-day h6{
+    font-size: 22px;
+    margin: 10px 0;
+}
+.image-day p{
+    font-size: 1rem;
+    line-height: 30px;
+    width: 29%;
+}
+.image-day img {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    background-color: aliceblue;
+    padding-left: 20%;
+    padding-right: 10%;
+}
+.image {
+    position: relative;
+}
+
+/*Earth Information Center */
+.earth-center {
+    background: url("./Images/Image/mileb.jpg"), no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.earth-center h5 {
+    font-size: 80px;
+    color: #ffffff;
+    width: 10%;
+    line-height: 90%;
+    padding-top: 5%;
+    margin-bottom: 4%;
+}
+.earth-center p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    width: 42%;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 20px;
+}
+.earth-center a{
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+}
+.earth-center .fa-solid{
+    color: #f64137;
+    margin-left: 5px;
+    font-size: 18px;
+    position: relative;
+    top: 1px;
+    transform: rotate(-45deg);
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+    padding: 40px;
+    margin: 0;
+} 
+footer h5 {
+    color: gray;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+footer h4{
+    font-size: 26px;
+    width: 35%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+footer p {
+    font-size: 16px;
+    width: 27.5%;
+    margin: 0;
+    color: #9f9fa3;
+    line-height: 25px;
+
+}
+footer .extra-detail a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    top: 20px;
+    display: block;
+    margin-bottom: 15px;
+}
+footer #join-us{
+    font-weight: bold;
+    margin: 0;
+}
+footer .fa-solid{
+    color: #f64137;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-size: 26px;
+    position: relative;
+    top: 5px;
+}
+.footer {
+    position: relative;
+}
+footer .social-links {
+    position: absolute;
+    padding-left: 80%;
+    top: 50px;
+}
+footer .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+footer .social-links a:hover{
+    background-color: #24262b;
+    opacity: 90%;
+}
+footer .social-links a:nth-child(6)
+{
+    display: block;
+    width: 100%;
+    background-color: #000;
+    text-align: left;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+footer .social-links a:nth-child(7)
+{
+    display: block;
+    width: 90%;
+    background-color: #000;
+    text-align: left;
+    text-decoration: none;
+    margin: 0;
+    position: relative;
+    top: 2px;
+}
+footer hr {
+    display: block;
+    width: 100%;
+    border: 1px white solid;
+    margin-top: 60px;
+}
+
+/* Mobile Styling */
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    /*Header*/
+    header{
+        position: relative;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .logo{
+        position: relative;
+        color: #000;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    header img{
+        position: absolute;
+        width: 60px;
+        left: 10%;
+    }
+    header .navigation a{
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 5px 15px;  
+        border-radius: 5px;
+        transition: 0.9s ease;
+        margin-right: 20px;
+    }
+
+    /* All section Layout Style*/
+    .main, .image-day,.earth-center{
+        padding: 20px;
+    }
+    
+    /*main body*/
+    .main {
+        color: #ffffff;
+        background: url('./Images/Image/satellite.webp'),no-repeat;
+        background-blend-mode: darken;
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+    }
+    .main h2 {
+        font-size: 30px;
+        color: #ffffff;
+        width: 10%;
+        line-height: 90%;
+        padding-top: 5%;
+        margin-bottom: 4%;
+        margin-top: 0;
+    }
+    .main p{
+        font-size: 0.6rem;
+        line-height: 0.7rem;
+        width: 100%;
+        color: #ffffff;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    
+    .more-info {
+        color: #ffffff;
+        display: inline-block;
+        margin-right: 8%;
+        margin-left: 0;
+    
+    }
+    .more-info p{
+        padding-top: 0;
+        padding-left: 10px;
+        display: inline;
+        align-items: center;
+        letter-spacing: 4px;
+        font-size: 12px;
+        text-align: center;
+        overflow: visible;
+        margin: 0;
+    }
+    .main .more-info li{
+        position: relative;
+        top: -15px;
+        list-style: none;
+        font-size: 10px;
+    }
+    .main hr{
+        display: block;
+        width: 100%;
+        border: 1px white solid;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        font-size: 25px;
+    }
+
+    /*Earth Information Center */
+    .earth-center {
+        background: url("./Images/Image/mileb.jpg"), no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+    .earth-center h5,.earth-center p {
+        animation: none;
+    }
+    .earth-center h5 {
+        font-size: 30px;
+        color: #ffffff;
+        width: 10%;
+        line-height: 90%;
+        margin-bottom: 4%;
+    }
+    .earth-center p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        width: 92%;
+        color: #ffffff;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .earth-center a{
+        font-weight: bold;
+        color: #ffffff;
+        text-decoration: none;
+        font-size:15px;
+    }
+    .earth-center .fa-solid{
+        color: #f64137;
+        margin-left: 5px;
+        font-size: 18px;
+        position: relative;
+        top: 3px;
+        transform: rotate(-45deg);
+    }
+    
+        
+    /* Image of the day */
+    .image-day {
+        background-color: #ffffff;
+    }
+    .image-day span {
+        color: #000;
+        font-weight: lighter;
+        font-size: 10px;
+        gap: 5px;
+        letter-spacing: 2px;
+    }
+    .image-day h1 {
+        color: #000;
+        font-weight: bold;
+        margin-bottom: 4%;
+    }
+    .image-day h6{
+        font-size: 22px;
+        margin: 10px 0;
+    }
+    .image-day p{
+        font-size: 1rem;
+        line-height: 30px;
+        width: 100%;
+    }
+    .image-day img {
+        position: relative;
+        left: 0;
+        padding-left: 40px;
+        padding-right: 70px;
+        width: 280px;
+        background-color: aliceblue;
+    }
+    /* Animation Remove */
+.footer h4,.more-info ul {
+    animation: none;
+}
+
+
+/* Footer */
+.footer {
+    display: block;
+    position: relative;
+}
+.footer {
+    display: block;
+    background-color: #000;
+    color: white;
+    width: 80%;
+    padding-left: 0;
+    margin-top: 20px;
+    margin: 0;
+} 
+.footer .social-links {
+    display: block;
+    padding: 180px;
+}
+.footer h4{
+    display: block;
+    font-size: 30px;
+    width: 120%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.footer h5 {
+    display: block;
+    color: gray;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.footer img {
+    width: 60px;
+}
+.footer p {
+    font-size: 12px;
+    width: 100%;
+    margin: 0;
+    color: #9f9fa3;
+    line-height: 25px;
+}
+.extra-detail a{
+    font-size: 10px;
+    margin-bottom: 0;
+}
+.footer #join-us{
+    font-weight: bold;
+    margin: 0;
+}
+.footer .social-links {
+    position: relative;
+    display: block;
+    padding: 0;
+}
+.footer .fa-solid{
+    color: #f64137;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-left: 5px;
+    font-size: 18px;
+    top: 0;
+}
+
+.footer hr {
+    display: block;
+    width: 100%;
+    border: 1px white solid;
+    margin-top: 80px;
+}
+.footer span {
+    padding-left: 0%;
+    font-size: 11px;
+    text-align: center;
+}
+
+* {
+    animation: none;
+}
+}
