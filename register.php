@@ -5,38 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Information</title>
     <link rel="stylesheet" href="./Styles/register.css">
-    <!--    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 20px;
-        }
-        .container {
-            width: 400px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            background-color: #fff;
-        }
-        .button {
-            margin: 10px;
-            padding: 10px 20px;
-            border: none;
-            background-color: #28a745;
-            color: white;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #218838;
-        }
-        .edit {
-            background-color: #ffc107;
-        }
-        .edit:hover {
-            background-color: #e0a800;
-        }
-    </style>-->
 </head>
 <body>
     <div class="container">

@@ -6,6 +6,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST["password"];
 
     $sql = "INSERT INTO login (Email, Password) VALUES ('$email','$password')";
+
     
     $con->query($sql);
     $con->close();
